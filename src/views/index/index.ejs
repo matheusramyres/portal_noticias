@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/189d953830.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="bar">
+            <a href="/" class="logo"><img src="/images/logo.svg" alt="logo" /></a>
+            <div class="container-menu">
+                <div class="menu">
+                    <div class="menu-burger"></div>
+                </div>
+            </div>
+            <nav class="list-menu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/formulario_inclusao_noticia">Nova Noticia</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <%- include(page); %>
+        </main>
+
+        <footer>
+            <div class="bar header-footer">
+                <a href="#" class="logo"><img src="/images/logo.svg" alt="logo"> </a>
+                <ul class="social-media">
+                    <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/scripts/scripts.js"></script>
+</body>
+
+</html>
