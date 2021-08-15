@@ -1,31 +1,15 @@
-<!DOCTYPE html>
-	<html lang="pt-br">
-		<head>
-			<meta charset="utf-8"/>
-			<title>Notícias</title>
-		</head>
-	<body>
 
-		<h1>Notícias</h1>
+<% if(noticias.length > 0){ %>
+    <%for(let i=0; i < noticias.length; i++){%>
 
-		<table>
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>Titulo</th>
-					<th>Notícia</th>
-				</tr>
-			</thead>
-			<tbody>
-				<% for(var i=0; i < noticias.length; i++) {%>
-				<tr>
-					<td><%= noticias[i].id_noticia %></td>
-					<td><%= noticias[i].titulo %></td>
-					<td><%= noticias[i].noticia %></td>
-				</tr>
-				<% } %>
-			</tbody>
-		</table>
-
-	</body>
-</html>
+        <div class="card">
+            <a href="/noticia/<%=noticias[i].id %>">
+                <p>Por <%=noticias[i].autor %></p>
+                <h2><%=noticias[i].titulo %></h2>
+                <p id="data"><%=format(noticias[i].data_noticia)%></p>
+        
+                <p><%=noticias[i].resumo %></p>
+            </a>
+        </div>
+    <%}%>
+<%}%>
