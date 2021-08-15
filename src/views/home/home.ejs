@@ -1,0 +1,23 @@
+
+<% if(noticias.length){ %>
+    <%for(let i=0; i < noticias.length; i++){%>
+
+        <div class="card">
+            <a href="/noticia/<%=noticias[i].id %>">
+                <p>Por <%=noticias[i].autor %></p>
+                <h2><%=noticias[i].titulo %></h2>
+                <p id="data"><%=format(noticias[i].data_noticia)%></p>
+        
+                <p><%=noticias[i].resumo %></p>
+            </a>
+        </div>
+    <%}%>
+<%}%>
+        
+<div class="container-button">
+    <a href="/noticias" class="button btn-noticia">Todas as noticias</a>
+</div>
+
+
+
+
