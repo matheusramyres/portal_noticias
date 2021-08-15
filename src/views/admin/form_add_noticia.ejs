@@ -1,21 +1,21 @@
-<!DOCTYPE html>
-	<html lang="pt-br">
-		<head>
-			<meta charset="utf-8"/>
-			<title>Formulário de cadastro de Notícia</title>
-		</head>
-	<body>
 
-		<h1>Adicionar notícia</h1>
-		<form action="/noticia/create" method="POST">
-			<label for="titulo">Titulo</label>
-			<input type="text" name="titulo" id="titulo"/>
-			<br>
-			<br>
-			<label for="noticia">Noticia</label>
-			<textarea name="noticia" id="noticia" cols="60" rows="15"></textarea>
-			<input type="submit" value="Enviar">
-		</form>
+<form action="/noticia/create" method="POST">
 
-	</body>
-</html>
+    <%if (validacao.length > 0){%>
+        <ul class="validation">
+            <%for(let i=0; i < validacao.length; i++){%>
+                <li class="validation__item"><%=validacao[i].msg %></li>
+            <%}%>
+        </ul>
+    <%}%>
+
+    <input type="text" name="titulo" id="titulo" placeholder="Titulo" value="<%=campos.titulo%>" />                
+    <input type="text" name="resumo" id="resumo" placeholder="Resumo" value="<%=campos.resumo%>" />
+    <input type="text" name="autor" id="autor" placeholder="Autor" value="<%=campos.autor%>" />
+    <input type="date" name="dataNoticia" id="dataNoticia" value="<%=campos.dataNoticia%>" />
+    <textarea name="noticia" id="noticia" placeholder="Escreva sua notícia aqui..." > <%=campos.noticia%> </textarea>
+    
+    <div class="container-button">
+        <input class="button submit" type="submit" value="Enviar">
+    </div>
+</form>
