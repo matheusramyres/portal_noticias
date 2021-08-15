@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-	<html lang="pt-br">
-		<head>
-			<meta charset="utf-8"/>
-			<title>Portal de notícias</title>
-		</head>
-	<body>
 
-		<h1><%= noticia[0].titulo%></h1>
-		<p><%= noticia[0].noticia%></p>
+<%if(noticia.length > 0) {%>
 
-	</body>
-</html>
+    <%for(var i=0; i < noticia.length; i++){ %>
+        <div class="corpo-noticia">
+            <h1 class="titulo-noticia"><%=noticia[i].titulo%></h1>
+            <p class="autor-noticia"><%=noticia[i].autor%></p>
+            <p class="data-noticia"><%=format(noticia[i].data_noticia)%></p>
+            <p class="text-noticia"><%=noticia[i].noticia%></p>
+        </div>
+    <%}%>
+
+<%}%>
