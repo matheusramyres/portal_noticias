@@ -1,3 +1,4 @@
+const dotenv = require("dotenv").config();
 const express = require("express");
 const routes = require("./src/routes/routes");
 
@@ -15,6 +16,6 @@ app.use(routes);
 
 
 
-app.listen(3000, ()=>{
+app.listen(process.env.PORT || 3003, ()=>{
     console.log("Servidor rodando no link: http://localhost:3000");
 });
