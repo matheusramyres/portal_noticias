@@ -1,28 +1,18 @@
 const express = require("express");
-const noticiaController = require("../controllers/noticias");
+const { noticiaValidation } = require("../schemas/validation");
+const noticiaController = require("../controllers/noticiasController");
 
 const route = express.Router();
 
+route.get("/", noticiaController.noticiasHome);
 
-route.get("/", (req, res)=>{
-    res.render("home/index");
+route.get("/formulario_inclusao_noticia", noticiaController.formNoticia);
 
- });
+route.get("/noticias", noticiaController.indexNoticias);
 
-route.get("/noticias", noticiaController.index);
+route.post("/noticia/create", noticiaValidation, noticiaController.create);
 
-route.get("/formulario_inclusao_noticia", (req, res)=>{
-    res.render("admin/form_add_noticia");
-});
-
-route.post("/noticia/create", noticiaController.create);
-
-route.get("/noticia", (req, res)=>{
-
-    // con.query("SELECT * FROM noticias", async (err, result)=>{
-    //     res.render("noticias/noticia",{noticia: await result.rows});
-    // });
-});
+route.get("/noticia/:id", noticiaController.noticia);
 
 
 module.exports = route;
