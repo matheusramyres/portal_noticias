@@ -193,6 +193,19 @@ input, textarea{
     background: var(--text-author);
 }
 
+.validation{
+    background: #f2dede;
+    margin-bottom: 2rem;
+    padding: 0.9rem;
+    color: #a94442;
+
+    border: 2px solid #ebccd1;
+    border-radius: 0.5rem;
+}
+
+.validation li{
+    margin-left: 1rem;
+}
 
 /* Buttons */
 .submit{
