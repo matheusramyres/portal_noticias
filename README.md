@@ -8,19 +8,12 @@ Esse projeto é uma curta representação de um portal de notícias, e nele são
 
 ## 🚀 Começando
 
-### Capturas de tela
-
-#### Desktop-01
+### Screeshot
 
 <div align="center">
-    <img src="" width="800" alt="image-01" />
+    <img src="https://i.ibb.co/dGGB5wB/page.gif" width="800" alt="image-01" />
 </div>
 
-#### Mobile-02
-
-<div align="center">
-    <img src="" alt="image-01"/>
-</div>
 
 ### 📋 Pré-requisitos
 
