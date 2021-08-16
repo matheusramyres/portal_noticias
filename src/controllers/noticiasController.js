@@ -6,7 +6,7 @@ const principal = "index/index";
 module.exports = {
 
     async noticiasHome(req, res) {
-        await con.query("SELECT * FROM noticia", (err, result) => {
+        await con.query("SELECT * FROM noticia LIMIT 6", (err, result) => {
 
             return res.render(principal, {
                 page: "../home/home", 
