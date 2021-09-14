@@ -1,6 +1,6 @@
 :root{
-    --background: #F1F1F1;
-    --menu-bar: #060606;
+    --background: #231c42;
+    --menu-bar: #0606068e;
     --button:#38AAEA;
     --text-author:#FF6500;
     --text-date:#757575;
@@ -185,7 +185,6 @@ input, textarea{
     color: #ffffff;
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
 
     font-weight: normal;
     font-size: 1.8rem;
